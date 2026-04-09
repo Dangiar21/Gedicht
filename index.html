@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letzte und Erste Worte</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #e0e0e0;
+            --accent-color: #8b8b8b;
+        }
+
+        body {
+            font-family: 'Merriweather', 'Georgia', serif;
+            background: radial-gradient(circle at 50% -10%, #1c2538 0%, #0d0d0d 60%);
+            background-color: var(--bg-color);
+            background-attachment: fixed;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .dedication {
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 50px;
+            font-size: 1rem;
+            display: none;
+            animation: goldenGlow 3s ease-out forwards;
+        }
+
+        .code-bereich {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            opacity: 0.1;
+            transition: opacity 0.3s;
+        }
+
+        .code-bereich:hover {
+            opacity: 1;
+        }
+        
+        .code-bereich input {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--text-color);
+            padding: 5px;
+            font-family: inherit;
+            border-radius: 3px;
+            width: 80px;
+        }
+
+        .poem {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        .stanza {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .stanza.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .poem p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes goldenGlow {
+            0% { opacity: 0; text-shadow: 0 0 5px rgba(255, 215, 0, 0); transform: scale(0.95); }
+            50% { opacity: 1; text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 5px rgba(255, 215, 0, 0.4); transform: scale(1.02); color: #ffd700; }
+            100% { opacity: 1; text-shadow: 0 0 8px rgba(255, 215, 0, 0.3); transform: scale(1); color: #f4e896; }
+        }
+    </style>
+    <!-- Einbinden einer schönen Serif-Schrift -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Letzte und Erste Worte</h1>
+        <div class="dedication" id="widmung"></div>
+
+        <div class="poem">
+            <div class="stanza">
+                <p>Der Mond durchbricht das Himmelszelt,</p>
+                <p>sein Glanz erreicht die ganze Welt.</p>
+                <p>Die Erde trägt ihr weißes Kleid,</p>
+                <p>Kein Menschenleben weit und breit.</p>
+                <p>So folg ich blind der alten Spur,</p>
+                <p>tief durch die Weite der Natur.</p>
+                <p>Doch — was erblick ich dort im Schein?</p>
+                <p>Hab’ ich geträumt? Kann’s wirklich sein?</p>
+                <p>Welch Wesen wär mir fast entfleucht,</p>
+                <p>es strahlt so hell, das Dunkel scheucht.</p>
+                <p>Solch Schönheit ward noch nie gesehn,</p>
+                <p>Mein Geist erstarrt, kann nicht versteh’n.</p>
+                <p>Sein Glanz birgt einen fremden Bann,</p>
+                <p>der jeden Willen fesseln kann.</p>
+                <p>Es ruft mich, sanft und doch so fest,</p>
+                <p>das Erste, das mich fühlen lässt.</p>
+                <p>Ich jag’ zu ihm durch Schnee und Stein</p>
+                <p>bis ich endlich greife seinen Leib.</p>
+                <p>Doch nun ist das Leuchten kaum noch zu ertragen,</p>
+                <p>die Schönheit verkehrt sich zu quälenden Plagen.</p>
+                <p>Mein Auge erblindet, die Wahrheit erkannt,</p>
+                <p>mein Herz in Flammen, die Seele verbrannt.</p>
+                <p>Es reißt mich hinab, eine innere Schlacht,</p>
+                <p>bis das letzte Licht erlischt in der Nacht.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Schwarz – alles schwarz und doch,</p>
+                <p>seh’ ich mich selbst im Kellerloch.</p>
+                <p>Gefangen in der Dunkelheit,</p>
+                <p>kein Licht, kein Trost, nur Einsamkeit.</p>
+                <p>Die Wände kalt, das Eisen schwer,</p>
+                <p>die Schönheit atmet längst nicht mehr.</p>
+                <p>Das Wesen, das mich rief, ist fort,</p>
+                <p>nur Leere bleibt an diesem Ort.</p>
+                <p>Kann schrei’n, kann fleh’n, kann um mich schlagen,</p>
+                <p>Doch vergeblich bleibt mein Klagen.</p>
+                <p>Die Dunkelheit raubt mir die Sicht,</p>
+                <p>erstickt mein Hoffen, löscht mein Licht.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Doch wird das Licht erneut entbrannt,</p>
+                <p>Es reicht durchs Tor mir seine Hand.</p>
+                <p>Nun kehrt’s zurück in neuer Pracht,</p>
+                <p>es bringt mir Freude, neue Last.</p>
+                <p>Mein Herz verlangt nach seinem Schein,</p>
+                <p>doch weiß zugleich, es kann nicht sein.</p>
+                <p>Was ich begehr’, zerstört mich nur,</p>
+                <p>bin ein Knecht, verdammt zur Hur.</p>
+                <p>Lass mich lächelnd von dir erstechen,</p>
+                <p>lass mich lächelnd von dir zerbrechen.</p>
+                <p>Lass mich lächelnd von dir schinden,</p>
+                <p>lass mich lächelnd an dich binden.</p>
+                <p>Lass mich leiden unterm Dornenkranz,</p>
+                <p>und schmück mit Lorbeer deinen Glanz.</p>
+                <p>Nimm meine Freiheit, nimm mein Sein,</p>
+                <p>doch mein Gefühl bleibt ewig mein.</p>
+                <p>Es stirbt erst, wenn Stille spricht,</p>
+                <p>wenn dein verfluchtes Licht erlischt.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Wieder allein, ganz ohne Licht,</p>
+                <p>mein Glück so fern, mein Herz zerbricht.</p>
+                <p>Doch was verspricht mir dort mein Heil?</p>
+                <p>Auf kaltem Stein ein raues Seil.</p>
+                <p>Nun endlich weg von Qual und Pein,</p>
+                <p>tritt bald ein neues Leben ein.</p>
+                <p>Ich reiß’ mich los mit wunden Knochen,</p>
+                <p>die schweren Ketten sind zerbrochen.</p>
+                <p>Doch wie kann mein Herz noch zagen,</p>
+                <p>mein ganzer Leib droht zu versagen.</p>
+                <p>Will doch in die Freiheit fliehen,</p>
+                <p>mich der Qual nun ganz entziehen.</p>
+                <p>Mein Geist getrübt, kann nicht versteh’n,</p>
+                <p>will doch das Gefühl nicht vergeh’n.</p>
+                <p>Seit ich seinen Leib erstmals sah,</p>
+                <p>fühlte ich, was niemals war.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Das erste Mal, mein Herz entbrannt,</p>
+                <p>Liebe raubt mir den Verstand.</p>
+                <p>Das erste Mal, dich verehrt,</p>
+                <p>nichts im Leben so begehrt.</p>
+                <p>Das erste Mal, vor Anmut blind,</p>
+                <p>mein Geist naiv, so wie ein Kind.</p>
+                <p>Das erste Mal, der Wunsch zu zweit,</p>
+                <p>mit dir vereint in Ewigkeit.</p>
+                <p>Das erste Mal, nach dir gesehnt,</p>
+                <p>von Neid und Eifersucht verzehrt.</p>
+                <p>Das erste Mal, hab ich geweint,</p>
+                <p>weil wir nicht länger mehr vereint.</p>
+                <p>Das erste Mal, dass Schmerz mich traf,</p>
+                <p>und raubte mir den tiefen Schlaf.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Zerrissen zwischen Flucht und Drang,</p>
+                <p>kann nicht geh’n, mich hält der Zwang.</p>
+                <p>Hier drinnen kenn ich meine Plage,</p>
+                <p>doch draußen droht die große Frage.</p>
+                <p>Brech wieder ein, hab keinen Mut,</p>
+                <p>sink auf die Knie, wo's Seil nun ruht.</p>
+                <p>Das Seil, meine letzte Tat,</p>
+                <p>die Lösung gewusst, doch nie gesagt.</p>
+                <p>Mit letzter Kraft hoch an die Wand,</p>
+                <p>legs um mein Hals mit Zitterhand.</p>
+                <p>Ein letzter Schritt, ein letzter Blick,</p>
+                <p>es führt von hier kein Weg zurück.</p>
+                <p>Doch weicht das Leben von mir nicht,</p>
+                <p>eh deine Stimm’ die Stille bricht.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Dich gequält und nichts gesagt,</p>
+                <p>hättest du mich doch gefragt.</p>
+                <p>Hätte dich erlöst vom Schmerz,</p>
+                <p>Wahrheit hätt’ getröst’ dein Herz.</p>
+                <p>Doch kein Wort hast mir gegeben,</p>
+                <p>hängt am Seil dein ganzes Leben.</p>
+                <p>Das Wasser raubt mir nun die Sicht,</p>
+                <p>ich sehe nichts als noch dein Licht.</p>
+                <p>Es flackert kurz, dann ist’s erloschen,</p>
+                <p>mein Leid vorbei, die Lieb’ zerbrochen.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Nur die Angst, dich zu verlieren, wog schwerer als die Liebe, mein Freund.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="code-bereich">
+        <input type="password" id="geheimCode" placeholder="Code...">
+    </div>
+
+    <script>
+        async function v(e) {
+            const i = document.getElementById("geheimCode");
+            if (!i.value) return;
+            const k = new TextEncoder().encode(i.value);
+            const keyMaterial = await crypto.subtle.importKey(
+                "raw",
+                k,
+                {name: "PBKDF2"},
+                false,
+                ["deriveBits", "deriveKey"]
+            );
+            const salt = new TextEncoder().encode("letzte-worte-salt-987");
+            const b1 = await crypto.subtle.deriveBits(
+                {
+                    name: "PBKDF2",
+                    salt: salt,
+                    iterations: 500000,
+                    hash: "SHA-256"
+                },
+                keyMaterial,
+                256
+            );
+            const a1 = Array.from(new Uint8Array(b1));
+            const b2 = await crypto.subtle.digest('SHA-256', b1);
+            const a2 = Array.from(new Uint8Array(b2));
+            const h = a2.map(x => x.toString(16).padStart(2, '0')).join('');
+            if (h === "1be14bf29aa799930fbf532b298aee4b7fed2a0f4c8a2a99fa3bc6c410af3651") {
+                const d = [45, 192, 48, 35, 162, 152, 180, 60, 49, 193];
+                let s = "";
+                for (let j = 0; j < d.length; j++) {
+                    s += String.fromCharCode(d[j] ^ a1[j]);
+                }
+                let w = document.getElementById("widmung");
+                w.innerText = s;
+                w.style.display = "block";
+                document.querySelector(".code-bereich").style.display = "none";
+            }
+        }
+
+        document.getElementById("geheimCode").addEventListener("keyup", function() {
+            v();
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            
+            document.querySelectorAll('.stanza').forEach(stanza => {
+                observer.observe(stanza);
+            });
+        });
+    </script>
+</body>
+</html>
